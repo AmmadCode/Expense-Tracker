@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <!-- Budget Input -->
+    <div class="budget-form">
+      <input type="number" id="budget" placeholder="Enter Budget $" min="1">
+      <button id="set-budget">Set Budget</button>
+    </div>
+
+    <!-- Expense Form -->
+    <div class="expense-form">
+      <input type="number" id="amount" placeholder="Amount ($)" min="1">
+      <select id="category">
+        <option value="">Select Category</option>
+        <option value="food">Food</option>
+        <option value="transport">Transport</option>
+        <option value="bills">Bills</option>
+      </select>
+      <input type="date" id="date">
+      <button id="add-btn">Add Expense</button>
+    </div>
+
+    <!-- Summary -->
+    <div class="summary-cards">
+      <div class="card">
+        <h3>Total Spent</h3>
+        <p id="total">$0</p>
+      </div>
+      <div class="card">
+        <h3>Remaining Budget</h3>
+        <p id="remaining">$0</p>
+      </div>
+    </div>
+
+    <!-- Expense List -->
+    <table id="expense-table">
+      <thead>
+        <tr>
+          <th>Amount</th>
+          <th>Category</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Chart -->
+    <canvas id="expense-chart" width="400" height="200"></canvas>
+   
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
